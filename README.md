@@ -1,6 +1,4 @@
-# libft
-
-> <h1>LIBFT</h1>
+> <h1>libft</h1>
 
 Status: in progress
 
