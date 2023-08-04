@@ -35,6 +35,16 @@ int	ft_count_words(char const *s, char c)
 	return (count_word);
 }
 
+void	ft_free(char **words, int i)
+{
+	while (i - 1 >= 0)
+	{
+		free(words[i]);
+		i--;
+	}
+	free(words);
+}
+
 char	**ft_init_words(char const *s, char **words, int k, int count_letters)
 {
 	int	l;
@@ -70,7 +80,7 @@ char	**ft_logic(char const *s, char **words, char c, int count_word)
 		}
 		words[i] = malloc((count_letters + 1) * sizeof(char));
 		if (words[i] == NULL)
-			return (NULL);
+			ft_free(words, i);
 		else
 			ft_init_words(s, &words[i], j - count_letters, count_letters);
 		i++;
@@ -84,6 +94,8 @@ char	**ft_split(char const *s, char c)
 	char	**words;
 	int		count_word;
 
+	if (s == NULL)
+		return (NULL);
 	count_word = ft_count_words(s, c);
 	words = malloc((count_word + 1) * sizeof(char *));
 	if (words == NULL)

@@ -12,12 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
-char	*ft_strchr(const char *s, int c);
-
-char	*ft_strdup(const char *s);
-
 size_t	ft_start(char const *s1, char const *set)
 {
 	size_t	i;
@@ -57,6 +51,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*res;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	len = ft_strlen(s1);
 	start = ft_start(s1, set);
 	if (start == len)

@@ -38,7 +38,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new);
 }
 
-void	*ft_teste(void *content)
+/* void	*ft_teste(void *content)
 {
 	return (content);
 }
@@ -83,4 +83,4 @@ int	main(void)
 		new = new->next;
 		i++;
 	}
-}
+} */
