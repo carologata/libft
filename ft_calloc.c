@@ -15,7 +15,17 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*r;
+    size_t int_max;
 
+    int_max = -1;
+
+	if (size != 0 && (nmemb >= int_max / size))
+		return (NULL);
+    else if (nmemb == 0 || size == 0)
+	{
+		nmemb = 1;
+        size = 1;
+	}
 	r = malloc(nmemb * size);
 	if (r == NULL)
 		return (NULL);
@@ -24,16 +34,21 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 /* #include <stdio.h>
+
 int	main(void)
 {
-    int *array;
-    int i;
-
-    array = ft_calloc(7, 4);
-    i = 0;
-    while(i < 20)
-    {
-        printf("%d, ", array[i]);
-        i++;
-    }
+    char *array;
+    // int i;
+    array = malloc(1 * sizeof(char));
+    array[0] = 'a';
+    array = ft_calloc(0, 0);
+    if(array == NULL)
+        printf("aqui");
+    // i = 0;
+    // while(i < 20)
+    // {
+    //     printf("%d, ", array[i]);
+    //     i++;
+    // }
+    free(array);
 } */

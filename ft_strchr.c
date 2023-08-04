@@ -12,9 +12,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*str;
-	unsigned char u;
+	int				i;
+	char			*str;
+	unsigned char	u;
 
 	str = (char *)s;
 	u = (unsigned char)c;

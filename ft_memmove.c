@@ -9,7 +9,29 @@
 /*   Updated: 2023/07/20 19:49:05 by cogata           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
+
+void	ft_move_s_after_d(char *d, const char *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+}
+
+void	ft_move_s_before_d(char *d, const char *s, size_t n)
+{
+	while (n > 0)
+	{
+		d[n - 1] = s[n - 1];
+		n--;
+	}
+}
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -20,23 +42,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (char *)dest;
 	s = (const char *)src;
 	i = 0;
-	if(!dest && !src)
+	if (!dest && !src)
 		return (NULL);
 	if (s > d)
-	{
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_move_s_after_d(d, s, n);
 	else
 	{
-		while (n > 0)
-		{
-			d[n - 1] = s[n - 1];
-			n--;
-		}
+		ft_move_s_before_d(d, s, n);
 	}
 	return (dest);
 }
@@ -56,58 +68,51 @@ The	memmove(void) function returns a pointer to dest. */
 
 int	main(void)
 {
-	char src[8] = {'1', '2', '3', '4', '5', '6', '7', '8'};
+	char	src[8];
+	size_t	n;
+	int		i;
+	char	src[8];
+	int		i;
+
+	src[8] = {'1', '2', '3', '4', '5', '6', '7', '8'};
 	// int src[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-
 	//src = # # # # # # # #
-
 	//dest =	# # # #
-
 	// {1, 2, 1, 2, 3, 4, 7, 8};
-
     // ----
-
     //src =    # # # # # # # #
-
 	//dest = # # # #
-
     // {1, 2, 3, 4, 3, 4, 7, 8};
-
-	size_t n = 4;
-
-	int i = 0;
+	n = 4;
+	i = 0;
 	while (i < 8)
 	{
 		printf("%c ", src[i]);
 		i++;
 	}
-
 	// printf("\nmmemove:\n");
     // memmove(src+10, src, (n * sizeof(char)));
-
     // i = 0;
 	// while (i < 8)
 	// {
 	// 	printf("%c ", src[i]);
 	// 	i++;
 	// }
-
     printf("\nft_mmemove:\n");
 	ft_memmove(src+10, src, (n * sizeof(char)));
 #include <stdio.h>
-int main(void)
+int	main(void)
 {
-	char src[8] = {0, 1, 2, 3, 4};
+	src[8] = {0, 1, 2, 3, 4};
 	ft_memmove(src, src+3, 12 * (sizeof(int)));
 	
-	int i = 0;
+	i = 0;
 	while (i < 48)
 	{
 		printf("%c ", src[i]);
 		i++;
 	}
 	return(0);
-
 }
 	i = 0;
 	while (i < 8)
@@ -118,7 +123,7 @@ int main(void)
 } */
 
 /* #include <stdio.h>
-int main(void)
+int	main(void)
 {
 	char src[8] = {0, 1, 2, 3, 4};
 	ft_memmove(src, src+3, 12 * (sizeof(int)));

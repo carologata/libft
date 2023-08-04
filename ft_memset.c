@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*str;
-	unsigned char u;
+	unsigned char	u;
 
 	str = (unsigned char *)s;
 	u = (unsigned char)c;
@@ -31,7 +31,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 /* The  memset()  function  fills  the  first  n  bytes of the memory area
 pointed to by s with the constant byte c.
-The memset() function returns a pointer to the memory area s. */
+The	memset(void) function returns a pointer to the memory area s. */
 
 /* #include <stdio.h>
 

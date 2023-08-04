@@ -16,11 +16,11 @@ size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const char *dest;
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	total_len;
-	int		i;
+	const char	*dest;
+	size_t		dest_len;
+	size_t		src_len;
+	size_t		total_len;
+	int			i;
 
 	dest = (const char *)dst;
 	dest_len = ft_strlen(dest);
