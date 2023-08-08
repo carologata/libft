@@ -27,27 +27,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (NULL);
 }
-
-/* t_list	*ft_lstnew(void *content)
-{
-	t_list	*new_node;
-
-	new_node = malloc(1 * sizeof(t_list));
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	t_list *HEAD;
-	t_list *last;
-
-	HEAD = ft_lstnew("hello");
-	HEAD->next = ft_lstnew("world");
-
-	last = ft_lstlast(HEAD);
-
-	printf("%s\n", (char *)last->content);
-} */

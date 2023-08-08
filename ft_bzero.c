@@ -25,22 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/* #include <stdio.h>
-#include <strings.h>
-int	main(void)
-{
-	char str[8] = "Caroline";
-	int i = 0;
-
-	ft_bzero(&str[5], 3);
-    // bzero(&str[5], 3);
-
-	printf("%s\n", str);
-
-	while (i < 8)
-	{
-		printf("%d ", str[i]);
-        i++;
-	}
-} */

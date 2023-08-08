@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
-char	*ft_strdup(const char *s);
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
@@ -41,16 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/* char* const is an immutable pointer (it cannot point to any other location) 
-but the contents of location at which it points are mutable. */
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char *src = "0123456789";
-	char *dest = ft_substr(src, 9, 10);
-	// free(src);
-	free(dest);
-} */

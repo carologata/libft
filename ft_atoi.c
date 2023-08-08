@@ -38,16 +38,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
-
-/* #include <stdlib.h>
-#include <stdio.h>
-
-int	main(void)
-{
-    char *nptr = "\n \t  \f     +2340fdfas006";
-    int result;
-    result = ft_atoi(nptr);
-    printf("ft_atoi: %d\n", result);
-    result = atoi(nptr);
-    printf("atoi: %d\n", result);
-} */

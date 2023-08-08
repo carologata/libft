@@ -18,19 +18,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char str[20] = "Hello545DF4&*&$@Fdfa";
-	char res[20];
-
-	int i = 0;
-	while (i < 20)
-	{
-		res[i] = ft_toupper(str[i]);
-        printf("%c", res[i]);
-		i++;
-	}
-} */

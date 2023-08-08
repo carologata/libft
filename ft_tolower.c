@@ -18,17 +18,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-    char str[10] = "aCA*7@(eAB";
-    int i = 0;
-    while(i < 10)
-    {
-        str[i] = ft_tolower(str[i]);
-        printf("%c", str[i]);
-
-        i++;
-    }
-} */

@@ -12,9 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
-char	*copy_str(char const *s1, char const *s2, char *res)
+char	*ft_copy_str(char const *s1, char const *s2, char *res)
 {
 	int	i;
 	int	j;
@@ -49,21 +47,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res = malloc(len1 + len2 + 1);
 	if (res == NULL)
 		return (NULL);
-	copy_str(s1, s2, res);
+	ft_copy_str(s1, s2, res);
 	return (res);
 }
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char const *s1 = "Carol ";
-	char const *s2 = "Ogata";
-
-	char *res = ft_strjoin(s1, s2);
-	printf("%s\n", res);
-
-	free(res);
-
-	return(0);
-} */

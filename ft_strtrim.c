@@ -70,13 +70,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[i] = '\0';
 	return (res);
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-	char const *s1 = "   xxx   xxx";
-	char const *set = " x";
-	char *res = ft_strtrim(s1, set);
-
-    printf("%s\n", res);
-} */

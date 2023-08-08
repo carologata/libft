@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t			size;
@@ -29,24 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-/* The strrchr() function returns a pointer to the last occurrence 
-of the character c in the string s.
-The	strchr(void) and strrchr() functions return a pointer  to  the  matched
-character  or NULL if the character is not found.  The terminating null
-byte is considered part of the string, so that if  c  is  specified  as
-'\0', these functions return a pointer to the terminator. */
-
-/* #include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char str[9] = "Canoline";
-	char *s;
-
-	// s = ft_strrchr(str, 'n');
-	s = strrchr(str, 'n');
-
-	printf("%s\n", s);
-} */

@@ -29,21 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/* The  strcmp()  function compares the two strings s1 and s2.
-It  returns an integer less than, equal to, or greater than
-zero if s1 is found, respectively, to be less than,  to  match,  or  be
-greater than s2. */
-
-/* #include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-    char *s1 = "Hall";
-    char *s2 = "Halla";
-    int result;
-
-    result = ft_strncmp(s1, s2, 5);
-    printf("%d\n", result);
-} */

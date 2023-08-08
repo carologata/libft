@@ -19,23 +19,3 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-
-/* #include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-    int result;
-
-    result = isalnum(49);
-    printf("%d\n", result);
-
-    result = ft_isalnum(49);
-    printf("%d\n", result);
-
-    result = isalnum('#');
-    printf("%d\n", result);
-
-    result = ft_isalnum('#');
-    printf("%d\n", result);
-} */

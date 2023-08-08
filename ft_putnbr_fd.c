@@ -46,8 +46,3 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_logic_putnbr(fd, nb);
 	}
 }
-
-/* int main(void)
-{
-    ft_putnbr_fd(1234, 1);
-} */

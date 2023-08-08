@@ -23,21 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-/* the strlen() function calculates the length of the string pointed to by s,
-excluding the terminating null byte ('\0') */
-
-/* #include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char *str = "Caroline";
-	int result;
-
-	result = ft_strlen(str);
-	printf("%d\n", result);
-
-	result = strlen(str);
-	printf("%d\n", result);
-} */

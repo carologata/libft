@@ -89,11 +89,3 @@ char	*ft_itoa(int n)
 	ft_init_str(nb, res, count, is_negative);
 	return (res);
 }
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char *res = ft_itoa(2147483648);
-	printf("%s\n", res);
-} */

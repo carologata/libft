@@ -18,19 +18,3 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-
-//checks for a digit (0 through 9).
-
-/* #include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-    int result;
-
-    result = isdigit(51);
-    printf("%d\n", result);
-
-    result = ft_isdigit(51);
-    printf("%d\n", result);
-} */

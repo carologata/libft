@@ -20,17 +20,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		free(lst);
 	}
 }
-
-/* int main(void)
-{
-    t_list *HEAD;
-    t_list *new;
-    char *s;
-    char *c;
-    s = "Caroline";
-    c = "Ogata";
-    HEAD = ft_lstnew(s);
-    new = ft_lstnew(c);
-    
-    HEAD->next = new;
-} */

@@ -103,19 +103,3 @@ char	**ft_split(char const *s, char c)
 	ft_logic(s, words, c, count_word);
 	return (words);
 }
-
-/* #include <stdio.h>
-
-int	main(void)
-{
-	char **p;
-	char const *s = "ABCDE df dfasd  dfads f  dfa ";
-	p = ft_split(s, ' ');
-
-	int i = 0;
-	while (i < 6)
-	{
-		printf("%s\n", p[i]);
-		i++;
-	}
-} */
