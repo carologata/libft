@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cogata <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 14:50:07 by cogata            #+#    #+#             */
-/*   Updated: 2023/07/22 14:50:08 by cogata           ###   ########.fr       */
+/*   Created: 2023/08/02 15:43:42 by cogata            #+#    #+#             */
+/*   Updated: 2023/08/02 16:14:21 by cogata           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	void	*r;
-	size_t	size_t_max;
+	t_list	*current;
+	t_list	*aux;
 
-	if (nmemb == 0 || size == 0)
-		return (malloc(0));
-	size_t_max = -1;
-	if (size != 0 && (nmemb >= size_t_max / size))
-		return (NULL);
-	r = malloc(nmemb * size);
-	if (r == NULL)
-		return (NULL);
-	ft_memset(r, 0, nmemb * size);
-	return (r);
+	if (lst == NULL || del == NULL)
+		return ;
+	current = *lst;
+	while (current != NULL)
+	{
+		aux = current->next;
+		del(current->content);
+		free(current);
+		current = aux;
+	}
+	*lst = NULL;
 }
