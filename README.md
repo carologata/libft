@@ -4,6 +4,8 @@ Status: in progress
 
 > <h3>My first C library <h3>
 
+> <h3>New knowledge: STATIC LIBRARY<h3>
+
 > <h3>Functions: </h3>
 
 + ft_isalpha
