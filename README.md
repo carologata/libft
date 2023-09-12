@@ -1,6 +1,6 @@
 > <h1>libft</h1>
 
-Status: in progress
+Status: finished
 
 > <h3>My first C library <h3>
 
