@@ -2,9 +2,11 @@
 
 Status: finished
 
-> <h3>My first C library <h3>
+> <h3>New knowledge: </h3> 
+  + STATIC LIBRARY
 
-> <h3>New knowledge: STATIC LIBRARY<h3>
+> <h3>Description: </h3>
+The purpose of the project is to create a library libft.a with all the functions below using command ar.
 
 > <h3>Functions: </h3>
 
@@ -42,4 +44,23 @@ Status: finished
 + ft_putstr_fd
 + ft_putendl_fd
 + ft_putnbr_fd
+  
+> <h3> How to compile: </h3>
+
+```bash
+# clone repository
+git clone https://github.com/carologata/42-libft.git
+
+# enter thee folder
+cd 42-libft
+
+# compile Mandatory using Makefile
+make
+
+# compile Bonus using Makefile
+make bonus
+
+# the result of compilation is the static library
+libft.a
+```
 
